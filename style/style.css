@@ -122,10 +122,10 @@ HEADER PHOTO
 /* ----------------------------
 ABOUT ME
 ---------------------------- */
-#about {
+/* #about {
   padding-top: 50px;
   margin-top: -50px;
-}
+} */
 .aboutMe {
   background-color: #fff2e3;
 }
@@ -134,38 +134,75 @@ ABOUT ME
   position: relative;
 }
 
-.aboutMeText {
-  line-height: 200%;
-  padding: 100px 50px 50px;
-  position: relative;
+.aboutMePhoto img {
+  width: 100%;
 }
 
-.aboutMeText h1 {
+.secondAboutMeText {
+  line-height: 200%;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.firstAboutMeText {
+  padding: 100px 50px 20px;
+  position: relative;
+  line-height: 200%;
+}
+
+.firstAboutMeText h1 {
   position: absolute;
   top: 45px;
   font-family: "Saira Condensed", sans-serif;
   font-weight: 600;
 }
 
-.aboutMe img {
-  position: absolute;
-  width: 80%;
-  margin: -50px 0 0 10%;
-  border: 5px solid white;
-  border-radius: 10px;
-  filter: drop-shadow(16px 12px 47px rgba(0, 0, 0, 0.6));
+@media (min-width: 700px) {
+  .aboutMePhoto img {
+    width: 92%;
+  }
+}
+
+@media (min-width: 900px) {
+  .aboutMePhoto img {
+    width: 70%;
+    float: right;
+  }
+
+  .secondAboutMeText {
+    padding: 0 50px 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .secondAboutMeText {
+    padding: 100px 50px 20px;
+  }
+
+  .aboutMePhoto img {
+    float: unset;
+    width: 90%;
+    padding-bottom: 50px;
+  }
 }
 
 @media (min-width: 1200px) {
-  .aboutMe img {
+  /* .aboutMe img {
     width: 70%;
     margin: -50px 0 0 15%;
-  }
+  } */
 
-  .aboutMeText {
-    line-height: 200%;
+  /* .aboutMePhoto img {
+    position: absolute;
+    width: 80%;
+    margin: -50px 0 0 10%;
+    border: 5px solid white;
+    border-radius: 10px;
+    filter: drop-shadow(16px 12px 47px rgba(0, 0, 0, 0.6));
+  } */
+
+  .firstAboutMeText {
     padding: 100px 50px 50px;
-    position: relative;
   }
 }
 
@@ -175,6 +212,7 @@ SERVICES
 
 .services {
   line-height: 180%;
+  font-family: "Saira Condensed", sans-serif;
 }
 
 .services ul {
@@ -187,7 +225,7 @@ SERVICES
   background: url(../img/dot.png) no-repeat left 5px;
   padding-left: 40px;
   margin: 10px 0;
-  font-family: "Saira Condensed", sans-serif;
+
   font-size: 18px;
 }
 
@@ -311,7 +349,7 @@ FOOTER
 footer {
   background-color: #2b2b2b;
   text-align: center;
-  color: #fff;
+  color: rgba(255, 255, 255);
   font-size: 20px;
   border-top: 2px solid white;
 }
