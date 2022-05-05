@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&family=Saira+Condensed&display=swap");
+
+/* ----------------------------
+NAVIGATION
+---------------------------- */
+
+.logoImage {
+  height: 50px;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 20px;
+}
+
+@media (min-width: 992px) {
+  .nav-item {
+    margin: 0 20px;
+    padding: 0 5px;
+    transition: 0.5s ease-in-out;
+    border: 2px solid transparent;
+    border-radius: 15px;
+  }
+
+  .nav-item:hover {
+    border: 2px solid white;
+  }
+}
