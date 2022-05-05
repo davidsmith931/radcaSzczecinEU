@@ -14,6 +14,7 @@ nav {
   left: 0;
   z-index: 200;
   width: 100%;
+  background-color: #202020;
 }
 
 .nav-link {
@@ -33,6 +34,10 @@ nav {
 
   .nav-item:hover {
     border: 2px solid white;
+  }
+
+  nav {
+    background-color: transparent;
   }
 }
 
@@ -117,7 +122,10 @@ HEADER PHOTO
 /* ----------------------------
 ABOUT ME
 ---------------------------- */
-
+#about {
+  padding-top: 50px;
+  margin-top: -50px;
+}
 .aboutMe {
   background-color: #fff2e3;
 }
