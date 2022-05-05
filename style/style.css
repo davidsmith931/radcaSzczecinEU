@@ -162,6 +162,34 @@ ABOUT ME
 }
 
 /* ----------------------
+SERVICES
+---------------------- */
+
+.services {
+  line-height: 180%;
+}
+
+.services ul {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 50px;
+}
+
+.services li {
+  background: url(../img/dot.png) no-repeat left 3px;
+  padding-left: 40px;
+  margin: 10px 0;
+}
+
+.servicesBar {
+  display: block;
+  height: 2px;
+  background-color: #202020;
+  opacity: 0.1;
+  margin: 20px 0;
+}
+
+/* ----------------------
 FOOTER
 ---------------------- */
 
