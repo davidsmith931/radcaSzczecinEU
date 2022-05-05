@@ -41,7 +41,7 @@ HEADER PHOTO
 ---------------------------- */
 
 .headerPhoto {
-  height: 100vh;
+  height: calc(100vh + 50px);
   width: 100vw;
   overflow: hidden;
   position: relative;
@@ -176,9 +176,11 @@ SERVICES
 }
 
 .services li {
-  background: url(../img/dot.png) no-repeat left 3px;
+  background: url(../img/dot.png) no-repeat left 5px;
   padding-left: 40px;
   margin: 10px 0;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 18px;
 }
 
 .servicesBar {
@@ -190,6 +192,111 @@ SERVICES
 }
 
 /* ----------------------
+CONTACT
+---------------------- */
+
+.contact {
+  background-color: #2b2b2b;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 20px;
+  padding: 50px 0;
+  color: #fff;
+}
+
+.contactLeft ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contactLeft li {
+  margin: 20px 0;
+}
+
+.contact h1 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  margin-top: 50px;
+}
+
+#name,
+#lastName,
+#phone,
+#email {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+#name {
+  width: calc(50% - 4px);
+  margin: 0 8px 8px 0;
+}
+
+#lastName {
+  width: calc(50% - 4px);
+  margin-bottom: 8px;
+}
+
+#phone {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+#email {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+#content {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+#send {
+  float: right;
+  /* DO WYRZUCENIA */
+}
+
+#name::placeholder,
+#lastName::placeholder,
+#phone::placeholder,
+#email::placeholder,
+#content::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#name:focus::placeholder,
+#lastName:focus::placeholder,
+#phone:focus::placeholder,
+#email:focus::placeholder,
+#content:focus::placeholder {
+  color: transparent;
+}
+
+#send {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+  border: 3px solid #ffffff;
+  border-radius: 12px;
+  padding: 5px 30px;
+  margin-top: 5px;
+}
+
+@media (min-width: 769px) {
+  .contact {
+    padding: 100px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact h1 {
+    margin-top: 0;
+  }
+}
+/* ----------------------
 FOOTER
 ---------------------- */
 
@@ -198,4 +305,5 @@ footer {
   text-align: center;
   color: #fff;
   font-size: 20px;
+  border-top: 2px solid white;
 }
