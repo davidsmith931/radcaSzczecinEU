@@ -1,3 +1,11 @@
+$whiteColor: #fff;
+$blackColor: #000;
+$darkGrey: #202020;
+$brightGrey: #2b2b2b;
+$aboutMeColor: #fff2e3;
+$transpBlack: rgba(0, 0, 0, 0.7);
+$transpWhite: rgba(255, 255, 255, 0.9);
+
 /* ----------------------------
 NAVIGATION
 ---------------------------- */
@@ -10,26 +18,30 @@ nav {
   left: 0;
   z-index: 200;
   width: 100%;
-  background-color: #202020;
+  background-color: $darkGrey;
 }
 
 .nav-link {
   text-transform: uppercase;
-  font-family: "Saira Condensed", sans-serif;
-  font-size: 20px;
+  font: {
+    family: "Saira Condensed", sans-serif;
+    size: 20px;
+  }
 }
 
 @media (min-width: 992px) {
   .nav-item {
     margin: 0 20px;
     padding: 0 5px;
-    transition: 0.5s ease-in-out;
-    border: 2px solid transparent;
-    border-radius: 15px;
-  }
+    border: 2px solid transparent {
+      radius: 15px;
+    }
 
-  .nav-item:hover {
-    border: 2px solid white;
+    &:hover {
+      border: 2px solid $whiteColor;
+      transition: border-left 0.15s ease-in, border-top 0.3s ease-in,
+        border-right 0.6s ease-in, border-bottom 0.9s ease-in;
+    }
   }
 
   nav {
@@ -40,25 +52,27 @@ nav {
 /* ----------------------------
 HEADER PHOTO
 ---------------------------- */
-
 .headerPhoto {
-  height: calc(100vh + 50px);
+  height: 100vh;
   width: 100%;
   overflow: hidden;
   position: relative;
-}
-.headerPhoto img {
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
-  object-position: 80%;
+
+  img {
+    height: 100vh;
+    width: 100%;
+    object: {
+      fit: cover;
+      position: 80%;
+    }
+  }
 }
 
 .headerOverlay {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.351);
+  background-color: rgba(0, 0, 0, 0.35);
   top: 0;
   left: 0;
 }
@@ -68,34 +82,40 @@ HEADER PHOTO
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: $whiteColor;
   text-align: center;
   width: 100%;
 }
 
 .headerTextTop {
   display: block;
-  font-size: 60px;
-  font-family: "Great Vibes", cursive;
-  text-shadow: 2px 2px 0px #000000cc;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
   margin-bottom: -15px;
+  font: {
+    size: 60px;
+    family: "Great Vibes", cursive;
+  }
 }
 
 .headerBar {
   width: 350px;
   height: 3px;
-  background-color: white;
-  border-bottom: 1px solid black;
+  background-color: $whiteColor;
+  border-bottom: 1px solid $blackColor;
   display: block;
   margin: 0 auto;
 }
 
 .headerTextBottom {
-  font-family: "Roboto", sans-serif;
-  font-size: 22px;
-  text-shadow: 2px 2px 0px #000000b4;
+  font: {
+    family: "Roboto", sans-serif;
+    size: 22px;
+  }
+  text: {
+    shadow: 2px 2px 0px $transpBlack;
+    transform: uppercase;
+  }
   padding: 0 20px;
-  text-transform: uppercase;
 }
 
 @media (min-width: 769px) {
@@ -107,9 +127,7 @@ HEADER PHOTO
   .headerTextBottom {
     font-size: 32px;
   }
-}
 
-@media (min-width: 769px) {
   .headerBar {
     width: 500px;
   }
@@ -118,118 +136,66 @@ HEADER PHOTO
 /* ----------------------------
 ABOUT ME
 ---------------------------- */
-
 .aboutMe {
-  background-color: #fff2e3;
+  background-color: $aboutMeColor;
 }
 
 .aboutMePhoto {
   position: relative;
+
+  img {
+    width: 100%;
+  }
 }
 
-.aboutMePhoto img {
-  width: 100%;
-}
-
-.secondAboutMeText {
-  line-height: 200%;
-  position: relative;
-  padding-bottom: 50px;
-}
-
-.firstAboutMeText {
-  padding: 100px 50px 20px;
+.aboutMeText {
   position: relative;
   line-height: 200%;
-}
+  padding-bottom: 20px;
 
-.firstAboutMeText h1 {
-  position: absolute;
-  top: 45px;
-  font-family: "Saira Condensed", sans-serif;
-  font-weight: 600;
-}
-
-@media (min-width: 700px) {
-  .aboutMePhoto img {
-    width: 92%;
-  }
-}
-
-@media (min-width: 900px) {
-  .aboutMePhoto img {
-    width: 70%;
-    float: right;
+  p {
+    padding: 0 20px;
   }
 
-  .secondAboutMeText {
-    padding: 0 50px 20px;
-  }
-}
-
-@media (min-width: 992px) {
-  .secondAboutMeText {
-    padding: 100px 50px 20px;
-  }
-
-  .aboutMePhoto img {
-    float: unset;
-    width: 90%;
-    padding-bottom: 50px;
-  }
-}
-
-@media (min-width: 1200px) {
-  /* .aboutMe img {
-    width: 70%;
-    margin: -50px 0 0 15%;
-  } */
-
-  /* .aboutMePhoto img {
-    position: absolute;
-    width: 80%;
-    margin: -50px 0 0 10%;
-    border: 5px solid white;
-    border-radius: 10px;
-    filter: drop-shadow(16px 12px 47px rgba(0, 0, 0, 0.6));
-  } */
-
-  .firstAboutMeText {
-    padding: 100px 50px 50px;
+  h1 {
+    margin-left: 20px;
+    font: {
+      family: "Saira Condensed", sans-serif;
+      weight: 400;
+    }
   }
 }
 
 /* ----------------------
 SERVICES
 ---------------------- */
-
 .services {
   line-height: 180%;
   font-family: "Saira Condensed", sans-serif;
-  background-color: #fff;
-}
+  background-color: $whiteColor;
 
-.services ul {
-  padding: 0;
-  list-style: none;
-  margin-bottom: 50px;
-}
+  ul {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 50px;
 
-.services ul:last-of-type {
-  margin-bottom: 10px;
-}
+    &:last-of-type {
+      margin-bottom: 10px;
+    }
+  }
 
-.services li {
-  background: url(../img/dot.png) no-repeat left 5px;
-  padding-left: 40px;
-  margin: 10px 0;
-  font-size: 18px;
+  li {
+    background: url(../img/dot.png) no-repeat left 5px;
+    padding-left: 40px;
+    margin: 10px 0;
+    font-size: 18px;
+  }
 }
 
 .servicesBar {
   display: block;
   height: 2px;
-  background-color: #202020;
+  background-color: $darkGrey;
   opacity: 0.1;
   margin: 20px 0;
 }
@@ -237,33 +203,38 @@ SERVICES
 /* ----------------------
 CONTACT
 ---------------------- */
-
 .contact {
-  background-color: #2b2b2b;
-  font-family: "Saira Condensed", sans-serif;
-  font-size: 20px;
+  background-color: $brightGrey;
   padding: 50px 0;
-  color: #fff;
+  color: $whiteColor;
+  font: {
+    family: "Saira Condensed", sans-serif;
+    size: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $whiteColor;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin: {
+      bottom: 25px;
+      top: 50px;
+    }
+  }
 }
 
-.contact a {
-  text-decoration: none;
-  color: #fff;
-}
+.contactLeft {
+  ul {
+    list-style: none;
+    padding: 0;
+  }
 
-.contactLeft ul {
-  list-style: none;
-  padding: 0;
-}
-
-.contactLeft li {
-  margin: 20px 0;
-}
-
-.contact h1 {
-  font-size: 30px;
-  margin-bottom: 25px;
-  margin-top: 50px;
+  li {
+    margin: 20px 0;
+  }
 }
 
 #name,
@@ -271,87 +242,80 @@ CONTACT
 #phone,
 #email {
   padding: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #ffffff;
-  border-radius: 2px;
+  background: $transpWhite;
+  margin-bottom: 8px;
+  border: 2px solid $whiteColor {
+    radius: 2px;
+  }
 }
 #name {
   width: calc(50% - 4px);
-  margin: 0 8px 8px 0;
+  margin-right: 8px;
 }
 
 #lastName {
   width: calc(50% - 4px);
-  margin-bottom: 8px;
 }
 
-#phone {
-  width: 100%;
-  margin-bottom: 8px;
-}
-
+#phone,
 #email {
   width: 100%;
-  margin-bottom: 8px;
 }
 
 #content {
   width: 100%;
-  background: rgba(255, 255, 255, 0.9);
-  border: 2px solid #ffffff;
-  border-radius: 2px;
+  background: $transpWhite;
   padding: 10px;
+  border: 2px solid $whiteColor {
+    radius: 2px;
+  }
+}
+
+#name,
+#lastName,
+#phone,
+#email,
+#content {
+  &::placeholder {
+    color: $transpBlack;
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
 }
 
 #send {
-  float: right;
-  /* DO WYRZUCENIA */
-}
-
-#name::placeholder,
-#lastName::placeholder,
-#phone::placeholder,
-#email::placeholder,
-#content::placeholder {
-  color: rgba(0, 0, 0, 0.7);
-}
-
-#name:focus::placeholder,
-#lastName:focus::placeholder,
-#phone:focus::placeholder,
-#email:focus::placeholder,
-#content:focus::placeholder {
-  color: transparent;
-}
-
-#send {
-  color: #fff;
+  display: block;
+  color: $whiteColor;
   background: rgba(0, 0, 0, 0.2);
-  border: 3px solid #ffffff;
-  border-radius: 12px;
   padding: 5px 30px;
-  margin-top: 5px;
-}
-
-@media (min-width: 769px) {
-  .contact {
-    padding: 100px 0;
+  border: 2px solid $whiteColor {
+    radius: 12px;
+  }
+  margin: {
+    top: 5px;
+    left: auto;
   }
 }
 
 @media (min-width: 992px) {
-  .contact h1 {
-    margin-top: 0;
+  .contact {
+    padding: 100px 0;
+
+    h1 {
+      margin-top: 0;
+    }
   }
 }
+
 /* ----------------------
 FOOTER
 ---------------------- */
-
 footer {
-  background-color: #2b2b2b;
+  background-color: $brightGrey;
   text-align: center;
-  color: rgba(255, 255, 255);
+  color: $whiteColor;
   font-size: 20px;
-  border-top: 2px solid white;
+  border-top: 2px solid $whiteColor;
 }

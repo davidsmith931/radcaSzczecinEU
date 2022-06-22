@@ -33,7 +33,6 @@
     <!-- -------------------------
     NAVIGATION
     -------------------------- -->
-
     <nav
       id="home"
       data-scroll-header
@@ -107,7 +106,6 @@
     <!-- -------------------------
     HEADER PHOTO
     -------------------------- -->
-
     <div id="home" class="headerPhoto container-fluid p-0">
       <img
         src="img/headerPhoto.jpg"
@@ -124,33 +122,34 @@
     <!-- -------------------------
     ABOUT ME
     -------------------------- -->
-
     <div id="about" class="aboutMe container-flud py-xl-3">
       <div class="row d-flex justify-content-center mx-0">
-        <div class="col-8 col-sm-4 col-md-4 col-lg-3 aboutMePhoto mt-5">
+        <div
+          class="aboutMePhoto col-8 col-sm-5 col-md-4 col-lg-3 mt-5 px-md-4 px-lg-3 px-xl-5"
+        >
           <img src="img/aboutMe.jpg" alt="" />
         </div>
-        <div
-          class="firstAboutMeText col-10 col-sm-7 col-md-6 col-lg-4 col-xl-3 mx-md-3 mx-lg-0 px-xl-4 mt-xl-3"
-        >
+        <div class="aboutMeText col-sm-11 col-md-8 col-lg-7 col-xl-6 mt-5">
           <h1>O mnie</h1>
-          Jestem radcą prawnym działającą przy Okręgowej Izbie Radców Prawnych w
-          Szczecinie oraz mediatorem sądowym wpisanym na listę mediatorów
-          stałych Prezesa Sądu Okręgowego w Szczecinie. W ramach aktywności
-          zawodowej oraz poszerzania swoich doświadczeń już na etapie studiów
-          rozpoczęłam współpracę ze szczecińskimi oraz trójmiejskimi
-          kancelariami, a także placówką dyplomatyczną.
-        </div>
-        <div
-          class="secondAboutMeText col-10 offset-sm-4 offset-md-4 col-sm-7 col-md-6 offset-lg-0 col-lg-4 col-xl-3 mt-xl-3"
-        >
-          Zdobywaną wiedzę i umiejętności przekuwam na doświadczenie,
-          dopasowując przy tym styl pracy do potrzeb klienta. Przygotowywane
-          przeze mnie rozwiązania oparte są nie tylko o przepisy prawa, ale
-          również analizę sytuacji, zagrożeń oraz praktyki sądowej, którą
-          nabywam uczestnicząc w kilkuset rozprawach rocznie. Prywatnie jestem
-          miłośniczką podróży, gotowania i dobrej kuchni. Z pasją odkrywam nowe
-          miejsca, kultury i smaki.
+          <div class="d-flex flex-column flex-md-row">
+            <p>
+              Jestem radcą prawnym działającą przy Okręgowej Izbie Radców
+              Prawnych w Szczecinie oraz mediatorem sądowym wpisanym na listę
+              mediatorów stałych Prezesa Sądu Okręgowego w Szczecinie. W ramach
+              aktywności zawodowej oraz poszerzania swoich doświadczeń już na
+              etapie studiów rozpoczęłam współpracę ze szczecińskimi oraz
+              trójmiejskimi kancelariami, a także placówką dyplomatyczną.
+            </p>
+            <p>
+              Zdobywaną wiedzę i umiejętności przekuwam na doświadczenie,
+              dopasowując przy tym styl pracy do potrzeb klienta. Przygotowywane
+              przeze mnie rozwiązania oparte są nie tylko o przepisy prawa, ale
+              również analizę sytuacji, zagrożeń oraz praktyki sądowej, którą
+              nabywam uczestnicząc w kilkuset rozprawach rocznie. Prywatnie
+              jestem miłośniczką podróży, gotowania i dobrej kuchni. Z pasją
+              odkrywam nowe miejsca, kultury i smaki.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -158,10 +157,9 @@
     <!-- -------------------------
     SERVICES
     -------------------------- -->
-
     <div id="services" class="services container-fluid p-5">
       <div class="row">
-        <div class="col-12 col-md-10 col-lg-8 col-xl-7 mx-auto p-0 py-xl-3">
+        <div class="col-sm-11 col-md-10 col-lg-8 col-xl-7 mx-auto p-0 py-xl-3">
           <h1>Prawo</h1>
           <div class="servicesBar"></div>
           <ul>
@@ -205,7 +203,6 @@
     <!-- -------------------------
     CONTACT FORM
     -------------------------- -->
-
     <div id="contact" class="contact container-fluid">
       <div class="row d-flex justify-content-around align-items-center">
         <div class="contactLeft col-11 col-lg-4 col-xl-3">
@@ -220,20 +217,57 @@
         </div>
         <div class="col-11 col-lg-5">
           <h1>FORMULARZ KONTAKTOWY</h1>
-          <form>
-            <input type="text" id="name" placeholder="IMIĘ" /><input
+          <form
+            id="contactForm"
+            action="https://formsubmit.co/radek@zdoswiadczenia.pl"
+            method="POST"
+          >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="IMIĘ"
+              required
+            /><input
               type="text"
               id="lastName"
+              name="lastname"
               placeholder="NAZWISKO"
+              required
             />
-            <input type="tel" id="phone" placeholder="NUMER TELEFONU" />
-            <input type="email" id="email" placeholder="ADRES E-MAIL" />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              maxlength="15"
+              placeholder="NUMER TELEFONU"
+              pattern="\+?[0-9]+"
+              required
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="ADRES E-MAIL"
+              required
+            />
             <textarea
               rows="6"
               id="content"
+              name="content"
               placeholder="TREŚĆ WIADOMOŚCI"
+              required
             ></textarea>
-            <button id="send">Wyślij</button>
+            <button id="send" type="submit">Wyślij</button>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="text" name="_honey" style="display: none" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value="http://radcaszczecin.eu" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nowa wiadomość z formularza kontaktowego!"
+            />
           </form>
         </div>
       </div>
@@ -242,7 +276,6 @@
     <!-- -------------------------
     FOOTER
     -------------------------- -->
-
     <footer>
       <div class="container py-4">
         <div class="row">
