@@ -20,6 +20,13 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="style/custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@300&family=Saira+Condensed:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
   </head>
   <body>
@@ -30,7 +37,7 @@
     <nav
       id="home"
       data-scroll-header
-      class="navbar text-dark navbar-dark navbarColor navbar-expand-lg p-3"
+      class="navbar text-dark navbar-dark position-absolute navbarColor navbar-expand-lg p-3"
     >
       <div class="container-fluid">
         <a
@@ -118,20 +125,21 @@
     ABOUT ME
     -------------------------- -->
 
-    <div id="about" class="aboutMe container-flud">
+    <div id="about" class="aboutMe container-flud py-xl-3">
       <div class="row d-flex justify-content-center mx-0">
         <div class="col-8 col-sm-4 col-md-4 col-lg-3 aboutMePhoto mt-5">
           <img src="img/aboutMe.jpg" alt="" />
         </div>
         <div
-          class="firstAboutMeText col-10 col-sm-7 col-md-6 col-lg-4 col-xl-3 mx-md-3 mx-lg-0 mt-xl-3"
+          class="firstAboutMeText col-10 col-sm-7 col-md-6 col-lg-4 col-xl-3 mx-md-3 mx-lg-0 px-xl-4 mt-xl-3"
         >
           <h1>O mnie</h1>
           Jestem radcą prawnym działającą przy Okręgowej Izbie Radców Prawnych w
-          Szczecinie. W ramach aktywności zawodowej oraz poszerzania swoich
-          doświadczeń już na etapie studiów rozpoczęłam współpracę ze
-          szczecińskimi oraz trójmiejskimi kancelariami, a także placówką
-          dyplomatyczną.
+          Szczecinie oraz mediatorem sądowym wpisanym na listę mediatorów
+          stałych Prezesa Sądu Okręgowego w Szczecinie. W ramach aktywności
+          zawodowej oraz poszerzania swoich doświadczeń już na etapie studiów
+          rozpoczęłam współpracę ze szczecińskimi oraz trójmiejskimi
+          kancelariami, a także placówką dyplomatyczną.
         </div>
         <div
           class="secondAboutMeText col-10 offset-sm-4 offset-md-4 col-sm-7 col-md-6 offset-lg-0 col-lg-4 col-xl-3 mt-xl-3"
@@ -151,9 +159,9 @@
     SERVICES
     -------------------------- -->
 
-    <div id="services" class="services container p-5">
+    <div id="services" class="services container-fluid p-5">
       <div class="row">
-        <div class="col-12 col-md-10 col-lg-8 col-xl-7 mx-auto p-0">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7 mx-auto p-0 py-xl-3">
           <h1>Prawo</h1>
           <div class="servicesBar"></div>
           <ul>
