@@ -1,10 +1,6 @@
-const button = document.querySelector("#send");
-
-button.addEventListener("click", () =>
-  alert(
-    "Formularz jest aktualnie wyłączony, prosimy o kontakt pod adresem mailowym kontakt@radcaszczecin.eu"
-  )
-);
+document
+  .querySelector("#contactForm")
+  .addEventListener("submit", () => alert("Twoja wiadomość została wysłana!"));
 
 // POLYFILL SCROLL
 // ----------------------------------
@@ -16,20 +12,20 @@ const scroll = new SmoothScroll('.navbar a[href*="#"]', {
   // offset: 50,
 });
 
-// Prevents window from moving on touch on older browsers.
-window.addEventListener(
-  "touchmove",
-  function (event) {
-    event.preventDefault();
-  },
-  false
-);
+// // Prevents window from moving on touch on older browsers.
+// window.addEventListener(
+//   "touchmove",
+//   function (event) {
+//     event.preventDefault();
+//   },
+//   false
+// );
 
-// Allows content to move on touch.
-document.querySelector(".body-container").addEventListener(
-  "touchmove",
-  function (event) {
-    event.stopPropagation();
-  },
-  false
-);
+// // Allows content to move on touch.
+// document.querySelector(".body-container").addEventListener(
+//   "touchmove",
+//   function (event) {
+//     event.stopPropagation();
+//   },
+//   false
+// );
