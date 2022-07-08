@@ -63,11 +63,12 @@ HEADER PHOTO
   position: relative;
 
   img {
-    height: 100vh;
+    height: calc(100vh - 92px);
     width: 100%;
+    margin-top: 92px;
     object: {
       fit: cover;
-      position: 80%;
+      position: 80% 70%;
     }
   }
 }

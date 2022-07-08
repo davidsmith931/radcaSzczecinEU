@@ -1,3 +1,7 @@
+label {
+  display: none;
+}
+
 /* ----------------------------
 NAVIGATION
 ---------------------------- */
@@ -45,12 +49,13 @@ HEADER PHOTO
   position: relative;
 }
 .headerPhoto img {
-  height: 100vh;
+  height: calc(100vh - 92px);
   width: 100%;
+  margin-top: 92px;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 80%;
-     object-position: 80%;
+  -o-object-position: 80% 70%;
+     object-position: 80% 70%;
 }
 
 .headerOverlay {
